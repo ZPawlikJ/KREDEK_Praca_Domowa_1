@@ -61,7 +61,7 @@
             this.labelBuildingWood = new System.Windows.Forms.Label();
             this.pictureBoxBuildingWood = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonBuyPalace = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelResourceStone = new System.Windows.Forms.Label();
             this.labelResourceIron = new System.Windows.Forms.Label();
@@ -180,6 +180,7 @@
             this.trackBarFoodPeasantAssign.Size = new System.Drawing.Size(205, 45);
             this.trackBarFoodPeasantAssign.TabIndex = 3;
             this.trackBarFoodPeasantAssign.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarFoodPeasantAssign.Scroll += new System.EventHandler(this.trackBarFoodPeasantAssign_Scroll);
             // 
             // buttonUpgradeBuildingFood
             // 
@@ -247,6 +248,7 @@
             this.trackBarIronPeasantAssign.Size = new System.Drawing.Size(205, 45);
             this.trackBarIronPeasantAssign.TabIndex = 3;
             this.trackBarIronPeasantAssign.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarIronPeasantAssign.Scroll += new System.EventHandler(this.trackBarIronPeasantAssign_Scroll);
             // 
             // buttonUpgradeBuildingIron
             // 
@@ -314,6 +316,7 @@
             this.trackBarStonePeasantAssign.Size = new System.Drawing.Size(205, 45);
             this.trackBarStonePeasantAssign.TabIndex = 3;
             this.trackBarStonePeasantAssign.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarStonePeasantAssign.Scroll += new System.EventHandler(this.trackBarStonePeasantAssign_Scroll);
             // 
             // buttonUpgradeBuildingStone
             // 
@@ -376,7 +379,9 @@
             // 
             // trackBarWoodPeasantAssign
             // 
+            this.trackBarWoodPeasantAssign.LargeChange = 1;
             this.trackBarWoodPeasantAssign.Location = new System.Drawing.Point(330, 37);
+            this.trackBarWoodPeasantAssign.Maximum = 4;
             this.trackBarWoodPeasantAssign.Name = "trackBarWoodPeasantAssign";
             this.trackBarWoodPeasantAssign.Size = new System.Drawing.Size(205, 45);
             this.trackBarWoodPeasantAssign.TabIndex = 3;
@@ -413,7 +418,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.buttonBuyPalace);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -423,14 +428,14 @@
             this.tabPage2.Text = "Special Buildings";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonBuyPalace
             // 
-            this.button2.Location = new System.Drawing.Point(37, 134);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonBuyPalace.Location = new System.Drawing.Point(37, 134);
+            this.buttonBuyPalace.Name = "buttonBuyPalace";
+            this.buttonBuyPalace.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuyPalace.TabIndex = 1;
+            this.buttonBuyPalace.Text = "button2";
+            this.buttonBuyPalace.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -583,7 +588,7 @@
         private System.Windows.Forms.Label labelBuildingWood;
         private System.Windows.Forms.PictureBox pictureBoxBuildingWood;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonBuyPalace;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelResourceStone;
         private System.Windows.Forms.Label labelResourceIron;
